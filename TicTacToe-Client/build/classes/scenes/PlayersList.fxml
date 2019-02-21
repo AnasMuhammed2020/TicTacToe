@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="gameScenePane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scenesControllers.PlayersListController">
+   <children>
+      <Button layoutX="473.0" layoutY="350.0" mnemonicParsing="false" onAction="#handleSendInvitation" text="Send Invitation " />
+      <TableView fx:id="playersTable" layoutX="30.0" layoutY="82.0" onMouseClicked="#getSelectedPlayer" prefHeight="223.0" prefWidth="541.0">
+        <columns>
+          <TableColumn fx:id="playerNameCol" editable="false" prefWidth="286.0" resizable="false" sortable="false" text="Player name" />
+          <TableColumn fx:id="scoreCol" editable="false" prefWidth="118.0" resizable="false" sortable="false" text="Score" />
+            <TableColumn fx:id="statusCol" editable="false" minWidth="0.0" prefWidth="136.0" resizable="false" sortable="false" text="Status" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="48.0" fitWidth="51.0" layoutX="30.0" layoutY="13.0" onMouseClicked="#handlechooseMode" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../scenesImages/exit.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="30.0" layoutY="350.0" mnemonicParsing="false" onAction="#signout" prefHeight="36.0" prefWidth="74.0" text="Sign out" />
+   </children>
+   <stylesheets>
+        <URL value="@../css/Game.css" />
+    </stylesheets>
+</AnchorPane>

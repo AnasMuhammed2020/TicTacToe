@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="484.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scenesControllers.CompController">
+   <children>
+      <Button fx:id="playAgainBtn" disable="true" layoutX="494.0" layoutY="430.0" mnemonicParsing="false" onAction="#resetScene" prefHeight="36.0" prefWidth="90.0" text="Play again!" />
+      <Label fx:id="player1Name" layoutX="180.0" layoutY="29.0" text=" " />
+      <Label fx:id="player2Name" layoutX="264.0" layoutY="29.0" text=" " />
+      <Label fx:id="player" layoutX="434.0" layoutY="29.0" text=" " />
+      <Label fx:id="winnerLabel" layoutX="234.0" layoutY="430.0" prefHeight="30.0" prefWidth="260.0" text=" " textFill="#1188ff" />
+      <Label fx:id="vs" alignment="center" layoutX="302.0" layoutY="29.0" />
+      <GridPane fx:id="gameBoard" gridLinesVisible="true" layoutX="87.0" layoutY="42.0" prefHeight="367.0" prefWidth="409.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="151.0" minHeight="10.0" prefHeight="124.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="138.0" minHeight="10.0" prefHeight="124.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="119.0" minHeight="10.0" prefHeight="119.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="b1" mnemonicParsing="false" onAction="#handleButton1Action" prefHeight="173.0" prefWidth="175.0" />
+            <Button fx:id="b2" onAction="#handleButton2Action" prefHeight="124.0" prefWidth="139.0" GridPane.columnIndex="1" />
+            <Button fx:id="b3" onAction="#handleButton3Action" prefHeight="123.0" prefWidth="133.0" GridPane.columnIndex="2" />
+            <Button fx:id="b4" onAction="#handleButton4Action" prefHeight="129.0" prefWidth="157.0" GridPane.rowIndex="1" />
+            <Button fx:id="b5" onAction="#handleButton5Action" prefHeight="124.0" prefWidth="137.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="b6" onAction="#handleButton6Action" prefHeight="122.0" prefWidth="136.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button fx:id="b7" onAction="#handleButton7Action" prefHeight="168.0" prefWidth="168.0" GridPane.rowIndex="2" />
+            <Button fx:id="b8" onAction="#handleButton8Action" prefHeight="118.0" prefWidth="136.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button fx:id="b9" onAction="#handleButton9Action" prefHeight="118.0" prefWidth="136.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <ImageView fitHeight="48.0" fitWidth="51.0" layoutX="14.0" layoutY="15.0" onMouseClicked="#handlechooseMode" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../scenesImages/exit.png" />
+         </image>
+      </ImageView>
+   </children>
+   <stylesheets>
+        <URL value="@../css/Game.css" />
+    </stylesheets>
+</Pane>
