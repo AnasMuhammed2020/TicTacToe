@@ -1,6 +1,8 @@
 ===================================== TicTacToe ==============================
 ==============================================================================
-Integrated functions:
+
+============================================
+Integrated functions >
 ============================================
 
 1.Playing offline(wtih Computer)
@@ -18,7 +20,7 @@ Integrated functions:
 
 
 ============================================
-not Integrated functoins(only implemented):
+Not Integrated functoins(only implemented) >
 ============================================
 
 1.Updtae players' screens with game result
@@ -36,7 +38,7 @@ Server side >
 	Aml Mostafa Elsayed
 	Doaa Khalaf Mahmoud Yousef
 	Mohammed Yasser Abdelhameid
-
+	
 Client side >
 -------------
 	Anas Muhammed Rabea
